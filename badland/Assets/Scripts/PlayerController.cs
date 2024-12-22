@@ -13,11 +13,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Движение вправо-влево
+        
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        // Прыжок
+        
         if (Input.GetButtonDown("Jump"))
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
